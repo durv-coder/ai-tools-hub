@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Hub | Discover AI Tools</title>
+    <meta name="description" content="Discover AI tools for writing, coding, image generation, video creation and more.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+   <a href="./index.html" class="logo" aria-label="Go to AI Tools Hub homepage">
+    <h2>AI Tools Hub<span>.</span></h2>
+</a> 
+    
+<nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#tools">Explore Tools</a>
+    <a href="#about">About</a>
+
+    <button type="button" id="accountButton">Account</button>
+
+    <button type="button" id="themeToggle">
+        🌙 Dark Mode
+    </button>
+</nav>
+
+</header>
+
+<main>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Discover the Best AI Tools</h1>
+        <p>
+            Explore powerful AI tools to boost your creativity,
+            productivity and imagination.
+        </p>
+
+        <div class="search-area">
+            <input type="text" id="searchInput"
+                placeholder="Search AI tools..." autocomplete="off">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="assistants">Chatbots & Assistants</option>
+                <option value="research">Search & Research</option>
+                <option value="coding">Coding & Development</option>
+                <option value="image-generation">Image Generation</option>
+                <option value="graphic-design">Graphic Design</option>
+                <option value="video">Video Generation</option>
+                <option value="voice">Voice & Audio</option>
+                <option value="music">Music Generation</option>
+                <option value="writing">Writing & Content</option>
+                <option value="presentations">Presentations</option>
+                <option value="automation">Automation & Agents</option>
+                <option value="productivity">Business & Productivity</option>
+                <option value="translation">Translation & Language</option>
+                <option value="education">Education & Learning</option>
+                <option value="3d">3D & Modeling</option>
+                <option value="data-analysis">Data Analysis</option>
+                <option value="photo-editing">Photo Editing</option>
+                <option value="security">Security & Detection</option>
+            </select>
+
+            <select id="priceFilter">
+                <option value="all">All Plans</option>
+                <option value="free">Free</option>
+                <option value="paid">Paid</option>
+            </select>
+
+            <select id="sortFilter">
+                <option value="featured">Featured</option>
+                <option value="az">Name: A to Z</option>
+                <option value="za">Name: Z to A</option>
+                <option value="free-first">Free First</option>
+                <option value="paid-first">Paid First</option>
+            </select>
+
+            <button type="button" id="clearFilters">Clear Filters</button>
+        </div>
+    </section>
+
+    <!-- AI CATEGORY CARDS -->
+    <section class="categories-section" id="categories">
+        <h2>Explore AI Categories</h2>
+        <p class="categories-description">
+            Discover powerful AI tools organized by category.
+        </p>
+
+        <div class="category-grid">
+
+            <button class="category-card" data-category-filter="assistants">🤖 AI Chatbots & Assistants</button>
+            <button class="category-card" data-category-filter="research">🔎 AI Search & Research</button>
+            <button class="category-card" data-category-filter="coding">💻 AI Coding & Development</button>
+            <button class="category-card" data-category-filter="image-generation">🎨 AI Image Generation</button>
+            <button class="category-card" data-category-filter="graphic-design">🖌️ AI Graphic Design</button>
+            <button class="category-card" data-category-filter="video">🎬 AI Video Generation</button>
+            <button class="category-card" data-category-filter="voice">🎙️ AI Voice & Audio</button>
+            <button class="category-card" data-category-filter="music">🎵 AI Music Generation</button>
+            <button class="category-card" data-category-filter="writing">✍️ AI Writing & Content</button>
+            <button class="category-card" data-category-filter="presentations">📊 AI Presentations</button>
+            <button class="category-card" data-category-filter="automation">⚙️ AI Automation & Agents</button>
+            <button class="category-card" data-category-filter="productivity">📁 AI Business & Productivity</button>
+            <button class="category-card" data-category-filter="translation">🌐 AI Translation & Language</button>
+            <button class="category-card" data-category-filter="education">📚 AI Education & Learning</button>
+            <button class="category-card" data-category-filter="3d">🧊 AI 3D & Modeling</button>
+            <button class="category-card" data-category-filter="data-analysis">📈 AI Data Analysis</button>
+            <button class="category-card" data-category-filter="photo-editing">📸 AI Photo Editing</button>
+            <button class="category-card" data-category-filter="security">🛡️ AI Security & Detection</button>
+
+        </div>
+    </section>
+
+    <!-- EXPLORE TOOLS -->
+    <section id="tools" class="tools">
+
+        <h2>Explore AI Tools</h2>
+
+        <div class="tools-layout">
+
+            <!-- CATEGORY SIDEBAR -->
+            <aside class="category-sidebar">
+                <h3>Categories</h3>
+
+                <button class="sidebar-category active" data-category-filter="all">
+                    All AI Tools
+                </button>
+                <button class="sidebar-category" data-category-filter="assistants">🤖 Chatbots & Assistants</button>
+                <button class="sidebar-category" data-category-filter="research">🔎 Search & Research</button>
+                <button class="sidebar-category" data-category-filter="coding">💻 Coding & Development</button>
+                <button class="sidebar-category" data-category-filter="image-generation">🎨 Image Generation</button>
+                <button class="sidebar-category" data-category-filter="graphic-design">🖌️ Graphic Design</button>
+                <button class="sidebar-category" data-category-filter="video">🎬 Video Generation</button>
+                <button class="sidebar-category" data-category-filter="voice">🎙️ Voice & Audio</button>
+                <button class="sidebar-category" data-category-filter="music">🎵 Music Generation</button>
+                <button class="sidebar-category" data-category-filter="writing">✍️ Writing & Content</button>
+                <button class="sidebar-category" data-category-filter="presentations">📊 Presentations</button>
+                <button class="sidebar-category" data-category-filter="automation">⚙️ Automation & Agents</button>
+                <button class="sidebar-category" data-category-filter="productivity">📁 Business & Productivity</button>
+                <button class="sidebar-category" data-category-filter="translation">🌐 Translation & Language</button>
+                <button class="sidebar-category" data-category-filter="education">📚 Education & Learning</button>
+                <button class="sidebar-category" data-category-filter="3d">🧊 3D & Modeling</button>
+                <button class="sidebar-category" data-category-filter="data-analysis">📈 Data Analysis</button>
+                <button class="sidebar-category" data-category-filter="photo-editing">📸 Photo Editing</button>
+                <button class="sidebar-category" data-category-filter="security">🛡️ Security & Detection</button>
+            </aside>
+
+            <!-- TOOL CONTENT -->
+            <div class="tools-content">
+                <h3>Popular AI Tools</h3>
+
+                
+<div class="tool-grid" id="toolGrid">
+
+    <div class="tool-card" data-category="assistants" data-categories="assistants writing research education">
+        <span class="tool-icon">✍️</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="ChatGPT" aria-label="Add ChatGPT to favourites" aria-pressed="false">♡</button>
+        <h3>ChatGPT</h3>
+        <p>AI assistant for writing, research and learning.</p>
+        <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="image-generation" data-categories="image-generation graphic-design">
+        <span class="tool-icon">🎨</span>
+        <span class="tool-price paid">Paid plans</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Midjourney" aria-label="Add Midjourney to favourites" aria-pressed="false">♡</button>
+        <h3>Midjourney</h3>
+        <p>Generate creative images using artificial intelligence.</p>
+        <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="coding" data-categories="coding assistants productivity">
+        <span class="tool-icon">💻</span>
+        <span class="tool-price paid">Paid plans</span>
+        <button type="button" class="favorite-button" data-favorite-tool="GitHub Copilot" aria-label="Add GitHub Copilot to favourites" aria-pressed="false">♡</button>
+        <h3>GitHub Copilot</h3>
+        <p>AI coding assistant for software developers.</p>
+        <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="video" data-categories="video">
+        <span class="tool-icon">🎬</span>
+        <span class="tool-price paid">Paid plans</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Runway" aria-label="Add Runway to favourites" aria-pressed="false">♡</button>
+        <h3>Runway</h3>
+        <p>Create and edit videos using AI technology.</p>
+        <a href="https://runwayml.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="writing" data-categories="writing productivity">
+        <span class="tool-icon">📝</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Grammarly" aria-label="Add Grammarly to favourites" aria-pressed="false">♡</button>
+        <h3>Grammarly</h3>
+        <p>Improve grammar, spelling and writing quality.</p>
+        <a href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="image-generation" data-categories="image-generation photo-editing graphic-design">
+        <span class="tool-icon">🖼️</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Adobe Firefly" aria-label="Add Adobe Firefly to favourites" aria-pressed="false">♡</button>
+        <h3>Adobe Firefly</h3>
+        <p>Create and edit images with generative AI.</p>
+        <a href="https://firefly.adobe.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="coding" data-categories="coding assistants productivity">
+        <span class="tool-icon">⚡</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Cursor" aria-label="Add Cursor to favourites" aria-pressed="false">♡</button>
+        <h3>Cursor</h3>
+        <p>AI-powered code editor for developers.</p>
+        <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="assistants" data-categories="assistants writing coding research">
+        <span class="tool-icon">🧠</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Claude" aria-label="Add Claude to favourites" aria-pressed="false">♡</button>
+        <h3>Claude</h3>
+        <p>AI assistant for reasoning, writing and coding.</p>
+        <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="video" data-categories="video photo-editing">
+        <span class="tool-icon">📹</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="CapCut" aria-label="Add CapCut to favourites" aria-pressed="false">♡</button>
+        <h3>CapCut</h3>
+        <p>Video editing with AI-powered creative features.</p>
+        <a href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="image-generation" data-categories="image-generation graphic-design">
+        <span class="tool-icon">✨</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Leonardo AI" aria-label="Add Leonardo AI to favourites" aria-pressed="false">♡</button>
+        <h3>Leonardo AI</h3>
+        <p>Generate AI artwork and visual assets.</p>
+        <a href="https://leonardo.ai/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="research" data-categories="research assistants education">
+        <span class="tool-icon">🔍</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Perplexity" aria-label="Add Perplexity to favourites" aria-pressed="false">♡</button>
+        <h3>Perplexity</h3>
+        <p>AI-powered search and research assistant.</p>
+        <a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+    <div class="tool-card" data-category="graphic-design" data-categories="graphic-design video presentations image-generation">
+        <span class="tool-icon">🎥</span>
+        <span class="tool-price free">Free plan</span>
+        <button type="button" class="favorite-button" data-favorite-tool="Canva" aria-label="Add Canva to favourites" aria-pressed="false">♡</button>
+        <h3>Canva</h3>
+        <p>Create designs and videos with AI features.</p>
+        <a href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
+    </div>
+
+</div>
+
+                <p id="noResults" class="no-results" hidden>
+                    No AI tools found. Try another search.
+                </p>
+
+                <p id="resultsCount" class="results-count"></p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer id="about">
+    <p>© 2026 AI Tools Hub. Built with HTML, CSS and JavaScript.</p>
+</footer>
+
+<!-- ACCOUNT POPUP -->
+<div id="authModal" class="auth-modal" hidden>
+    <div class="auth-box">
+
+        <button type="button" id="closeAuth">✕</button>
+
+        <h2>Welcome to AI Tools Hub</h2>
+
+        <div id="authForms">
+            <h3>Create Account / Login</h3>
+
+            <input type="email" id="authEmail" placeholder="Enter your email">
+            <input type="password" id="authPassword" placeholder="Enter your password">
+
+            <button type="button" id="signupButton">Sign Up</button>
+            <button type="button" id="loginButton">Login</button>
+
+            <p id="authMessage"></p>
+        </div>
+
+        <button type="button" id="logoutButton" hidden>Logout</button>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

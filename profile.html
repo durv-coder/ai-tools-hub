@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AI Tools Hub</title>
+    <meta name="description" content="Manage your AI Tools Hub account and favourite AI tools.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" aria-label="Go to AI Tools Hub homepage"><h2>AI Tools Hub<span>.</span></h2></a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#tools">Explore Tools</a>
+            <button type="button" id="themeToggle" aria-label="Switch theme">🌙 Dark Mode</button>
+            <button type="button" id="profileLogout">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-page">
+            <div class="profile-card">
+                <div class="profile-avatar" aria-hidden="true">👤</div>
+                <h1>My Profile</h1>
+                <p>Manage your AI Tools Hub account.</p>
+                <section class="profile-details">
+                    <h2>Account Information</h2>
+                    <p>Email: <span id="profileEmail">Loading...</span></p>
+                    <p>Account Status: <span id="profileStatus">Checking...</span></p>
+                </section>
+                <section class="profile-favorites">
+                    <h2>♥ My Favourite AI Tools</h2>
+                    <p id="favoritesMessage" class="profile-loading" aria-live="polite">Loading your favourites...</p>
+                    <ul id="favoriteList" class="favorite-list"></ul>
+                </section>
+                <section class="profile-recently-viewed">
+                    <h2>🕒 Recently Viewed AI Tools</h2>
+                    <p id="recentlyViewedMessage" class="profile-loading" aria-live="polite">Loading recently viewed tools...</p>
+                    <ul id="recentlyViewedList" class="favorite-list"></ul>
+                    <button type="button" id="clearRecentlyViewed" class="remove-favorite-button" hidden>Clear History</button>
+                </section>
+                <p id="profileMessage" aria-live="polite"></p>
+                <div class="profile-actions"><a href="index.html#tools">Explore AI Tools</a></div>
+            </div>
+        </section>
+    </main>
+    <footer><p>© 2026 AI Tools Hub. Built with HTML, CSS and JavaScript.</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
